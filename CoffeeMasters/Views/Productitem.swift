@@ -1,9 +1,4 @@
-//
-//  Productitem.swift
-//  CoffeeMasters
-//
-//  Created by Bluyin  on 24/1/23.
-//
+//renderizando un  item
 
 import SwiftUI
 
@@ -21,7 +16,8 @@ struct Productitem: View {
                     Text(product.name)
                         .font(.title3)
                         .bold()
-                    Text("$ \(product.price)")
+                    //precio con solo dos decimales
+                    Text("$ \(product.price, specifier: "%.2f")")
                         .font(.caption)
                     
                 }.padding(8)

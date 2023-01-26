@@ -18,7 +18,7 @@ struct MenuPage: View {
                     ForEach(category.products) { product in
                         NavigationLink {
                             //pagina destino
-                            DetailsPage()
+                            DetailsPage(product: product)
                         } label: {
                             //al tocar el producto
                             Productitem(product: product)

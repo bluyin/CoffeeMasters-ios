@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct MenuPage: View {
+    
     @EnvironmentObject var menuManager: MenuManager
+
     var body: some View {
         NavigationView{
             List {
@@ -28,11 +30,12 @@ struct MenuPage: View {
                 }
             }.navigationTitle("Products")
         }
+        
     }
-}
-
-struct MenuPage_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuPage().environmentObject(MenuManager())
+    
+    struct MenuPage_Previews: PreviewProvider {
+        static var previews: some View {
+            MenuPage().environmentObject(MenuManager())
+        }
     }
 }
